@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 1px;
+  background-color: #ddd;
+  border: 1px solid #999;
+}
+
+.cell {
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: white;
+  position: relative;
+}
+
+.snake {
+  background-color: #ffcccb;
+}
+
+.ladder {
+  background-color: #90ee90;
+}
+
+.player {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.player-0 { background-color: red; }
+.player-1 { background-color: blue; }
+.player-2 { background-color: green; }
+.player-3 { background-color: yellow; }

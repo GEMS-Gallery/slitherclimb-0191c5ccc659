@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Typography, Button, CircularProgress, Grid, Paper } from '@mui/material';
 import { backend } from 'declarations/backend';
+import GameBoard from './GameBoard';
 
 type Player = {
   name: string;
@@ -85,15 +86,14 @@ const App: React.FC = () => {
   }
 
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="lg">
       <Typography variant="h4" gutterBottom>
         Snakes and Ladders
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12} md={8}>
           <Paper elevation={3} style={{ padding: '1rem', marginBottom: '1rem' }}>
-            <Typography variant="h6">Game Board</Typography>
-            {/* Implement game board visualization here */}
+            <GameBoard gameState={gameState} />
           </Paper>
         </Grid>
         <Grid item xs={12} md={4}>
